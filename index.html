@@ -1,145 +1,158 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>MITA 4.0 Demo</title>
-<style>
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-  vertical-align: middle;
-}
-</style>
-
-
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./mitaQuickRefGuide.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f35884c6639940969acf8bc8769a51b0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
-  }
-}</script>
-
-
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MITA 4.0 Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons (optional) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background: #fff;
+    }
+    #sidebarMenu {
+      width: 260px;
+      min-height: 100vh;
+      border-right: 1px solid #e1e4e8;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      background: #f8f9fa;
+      padding-top: 1rem;
+    }
+    main.content {
+      margin-left: 260px;
+      padding: 2rem;
+    }
+    .nav-link.active {
+      background-color: #eaecef;
+      font-weight: bold;
+      color: #0969da !important;
+    }
+    .nav-link {
+      color: #24292f;
+      padding-left: 1.5rem;
+    }
+    .nav-link:hover {
+      background-color: #f6f8fa;
+      color: #0969da !important;
+    }
+    .sidebar-section-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 0.5rem 0 0.25rem 0;
+      padding-left: 1rem;
+      color: #24292f;
+    }
+    .sidebar-divider {
+      border-top: 1px solid #e1e4e8;
+      margin: 0.5rem 0;
+    }
+  </style>
 </head>
-
-<body class="nav-sidebar floating nav-fixed">
-
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">MITA 4.0 Demo</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <span class="nav-link">
-<span class="menu-text">v1</span>
-    </span>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">MITA 4.0</a></li><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">Introduction to MITA 4.0</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
+<body>
+  <!-- Sidebar -->
+  <nav id="sidebarMenu" class="d-md-block sidebar">
+    <div class="position-sticky">
+      <div class="sidebar-section-title">MITA 4.0 Demo</div>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="#What-is-MITA">Introduction to MITA 4.0</a>
+          <ul class="nav flex-column">
+            <li><a class="nav-link" href="#What-is-MITA">What is MITA?</a></li>
+            <li><a class="nav-link" href="#Why-Adopt-MITA">Why Adopt MITA?</a></li>
+            <li><a class="nav-link" href="#How-is-MITA-4.0-Different">How is MITA 4.0 Different?</a></li>
+          </ul>
+        </li>
+        <li class="sidebar-divider"></li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="collapse" href="#capabilityModelSubmenu" role="button" aria-expanded="false" aria-controls="capabilityModelSubmenu">
+            MITA Capability Model <i class="bi bi-chevron-down"></i>
+          </a>
+          <ul class="collapse nav flex-column ms-3" id="capabilityModelSubmenu">
+            <li><a class="nav-link" href="#">Overview</a></li>
+            <li><a class="nav-link" href="#">MITA Capability Model and ORBIT</a></li>
+            <li><a class="nav-link" href="#">Relationship of MITA Capabilities to Maturity</a></li>
+            <li><a class="nav-link" href="#">Why use the MITA Capability Model?</a></li>
+            <li><a class="nav-link" href="#">How to use the MITA Capability Model?</a></li>
+            <li><a class="nav-link" href="#">Use Cases</a></li>
+          </ul>
+        </li>
+        <li class="sidebar-divider"></li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="collapse" href="#ssaSubmenu" role="button" aria-expanded="false" aria-controls="ssaSubmenu">
+            State Self-Assessment <i class="bi bi-chevron-down"></i>
+          </a>
+          <ul class="collapse nav flex-column ms-3" id="ssaSubmenu">
+            <li><a class="nav-link" href="#">What is the State Self-Assessment?</a></li>
+            <li><a class="nav-link" href="#">Why conduct a State Self-Assessment?</a></li>
+            <li><a class="nav-link" href="#">How to conduct a State Self-Assessment?</a></li>
+          </ul>
+        </li>
+        <li class="sidebar-divider"></li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="collapse" href="#conopsSubmenu" role="button" aria-expanded="false" aria-controls="conopsSubmenu">
+            Concept of Operations <i class="bi bi-chevron-down"></i>
+          </a>
+          <ul class="collapse nav flex-column ms-3" id="conopsSubmenu">
+            <li><a class="nav-link" href="#">What is a Concept of Operations?</a></li>
+            <li><a class="nav-link" href="#">Why Develop a Concept of Operations?</a></li>
+            <li><a class="nav-link" href="#">How to Develop a Concept of Operations?</a></li>
+          </ul>
+        </li>
+        <li class="sidebar-divider"></li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="collapse" href="#roadmapSubmenu" role="button" aria-expanded="false" aria-controls="roadmapSubmenu">
+            Roadmap <i class="bi bi-chevron-down"></i>
+          </a>
+          <ul class="collapse nav flex-column ms-3" id="roadmapSubmenu">
+            <li><a class="nav-link" href="#">What is a Roadmap?</a></li>
+            <li><a class="nav-link" href="#">Why Develop a Roadmap?</a></li>
+            <li><a class="nav-link" href="#">How to Develop a Roadmap?</a></li>
+          </ul>
+        </li>
+        <li class="sidebar-divider"></li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="collapse" href="#artifactsSubmenu" role="button" aria-expanded="false" aria-controls="artifactsSubmenu">
+            Artifacts and References <i class="bi bi-chevron-down"></i>
+          </a>
+          <ul class="collapse nav flex-column ms-3" id="artifactsSubmenu">
+            <li><a class="nav-link" href="#">MITA 3.0</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
-<!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
- <span class="menu-text">Introduction to MITA 4.0</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">What is MITA?</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./index.html#Why Adopt MITA?" class="sidebar-item-text sidebar-link"><span class="chapter-title">Why Adopt MITA?</span></a>
-  </div>
-</li>
-                  <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-	 
-  <a href="./index.html#How is MITA 4.0 Different?" class="sidebar-item-text sidebar-link"><span class="chapter-title">How is MITA 4.0 Different?</span></a>
-  </div>
+
+  <!-- Main Content -->
+  <main class="content" id="quarto-document-content">
+    <header>
+      <h1 id="What-is-MITA">What is MITA?</h1>
+    </header>
+    <section>
+      <img src="media/mitaLogo/mitaLogo.png" class="img-fluid" alt="MITA 4.0 Logo image" width="85%">
+      <p style="color: red;">This website is a staging environment and is intended for testing and development purposes only. The content, functionality, and features on this site may be incomplete, inaccurate, or subject to change at any time.</p>
+      <p>The Medicaid Information Technology Architecture (MITA), led by the Centers for Medicare & Medicaid Services (CMS), is an initiative and framework aimed at improving Medicaid IT.</p>
+      <p>To learn more and get involved with the MITA initiative, check out the <a href="https://www.medicaid.gov/medicaid/data-systems/medicaid-information-technology-architecture-mita/index.html">MITA page on Medicaid.gov</a>.</p>
+    </section>
+    <section>
+      <h2 id="Why-Adopt-MITA">Why Adopt MITA?</h2>
+      <p>The MITA Initiative provides significant benefits to Medicaid stakeholders, including the public, states, and the federal government.</p>
+      <!-- Add your images/content here -->
+    </section>
+    <section>
+      <h2 id="How-is-MITA-4.0-Different">How is MITA 4.0 Different?</h2>
+      <p>MITA 4.0 builds on MITA 3.0 to support Medicaid’s mission by helping states modernize their business processes and technology systems to improve the administration of their Medicaid programs.</p>
+      <!-- Add your images/content here -->
+    </section>
+  </main>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 </li>
       </ul>
   </li>
